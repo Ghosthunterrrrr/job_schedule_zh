@@ -8,9 +8,7 @@ import os
 import sys
 import datetime
 import logging.handlers
-import time
 import UtilVariables
-import re
 from UtilParseXML import parseCFGInfo
 from DbConnect import getConnect
 from apscheduler.schedulers.blocking import BlockingScheduler
