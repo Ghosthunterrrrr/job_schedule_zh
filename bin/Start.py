@@ -158,9 +158,7 @@ if __name__ == '__main__':
     scheduler = BlockingScheduler()
     # 调用xml解析获取脚本位置信息
     config = parseCFGInfo('fircus_dkh',  'job_config.xml')
-    for cronName in config.keys():
-        fileExt = cronName
-        cronConfig = config[cronName]
+    for fileExt, cronConfig in config.items():
         if cronConfig['enable'] == 'Ture':
             cronStr = cronConfig['cron']
             fileDir = cronConfig['path']

@@ -42,9 +42,7 @@ logger.addHandler(ch)
 # 获取数据库连接
 def getConnect(program):
     config = dbCFGInfo(program)
-    for cronName in config.keys():
-        dbType = cronName
-        cronConfig = config[cronName]
+    for dbType, cronConfig in config.items():
         if cronConfig['enable'] == 'Ture':
             host = cronConfig['host']
             port = cronConfig['port']
